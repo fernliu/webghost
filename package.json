@@ -1,0 +1,39 @@
+{
+  "name": "webghost",
+  "description": "Node Front_end automation test framework",
+  "version": "0.0.1",
+  "author": {
+    "name": "guxia"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "./lib/webghost.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "mocha":"*",
+    "expect.js":"*",
+    "archiver": "~0.6.1",
+    "async": "^0.9.0",
+    "chainit": "^2.1.1",
+    "css-parse": "^1.7.0",
+    "css-value": "0.0.1",
+    "deepmerge": "~0.2.7",
+    "pragma-singleton": "~1.0.3",
+    "request": "~2.34.0",
+    "rgb2hex": "^0.1.0",
+    "url": "^0.10.1",
+    "wgxpath": "^0.23.0"
+  },
+  "devDependencies": {},
+  "readme": "Ghost\n========\n\nNode Front-end automation test framework written in Node.js.  \n基于Selenium WebDriver和借鉴Camme的Webdriverjs实现。为何不直接采用Webdriverjs，原因有如下：  \n\n1. Camme的代码风格看似沿袭C\\#  \n2. Webdriverjs代码中职责不单一，包含驱动部分和测试部分代码。相对而言，测试部分代码不是那么优秀，所以选择结合`mocha`完成整个框架。保持各自的职责单一性。  \n3. API接口沿袭过去的方式，不太贴合前端。Ghost尽量提供jQuery风格的API给工程师，使得编写自动化测试代码可以更愉快。  \n\n# Prerequirement\n- 下载[webdriver2.0服务包](http://code.google.com/p/selenium/downloads/detail?name=selenium-server-standalone-2.24.1.jar&can=2&q=)\n- 运行下载到的服务包(请替换x为对应的版本号)  \n\n```\njava -jar selenium-server-standalone-2.x.x.jar\n```\n- 如果需要在Chrome上运行自动化脚本，请下载[Chrome driver](http://code.google.com/p/chromedriver/downloads/list)\n\n# Installation\n```\nnpm install webghost\n```\n\n# Documentation\n[Getting Started with Web Ghost](https://github.com/TBEDP/ghost/blob/master/doc/getting_started.md)  \n[API Documentation](https://github.com/TBEDP/ghost/blob/master/doc/APIs.md)  \n\n\n# TODO\n1. 熟悉webdriverjs.\n2. 利用工具类跑通交互行为.\n3. 集成mocha/should.\n4. 组织成框架.\n5. 写cases.\n6. 更新文档",
+  "readmeFilename": "README.md",
+  "_id": "webghost@0.0.1",
+  "_from": "webghost@"
+}
